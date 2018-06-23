@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour {
     public bool jump = true;
 
     public float moveForce { get; set; }
-    public float maxSpeed = .1f;
+    public float maxSpeed = 10f;
     public float jumpForce = 100f;
     public Transform groundCheck;
 
