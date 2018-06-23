@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SJUP", "SJUP.csproj", "{ED864305-E476-24AA-1C1F-087FF1708D80}"
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SJUP", "Assembly-CSharp.csproj", "{A37EA921-6F99-10C5-5663-63008C5A3916}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{ED864305-E476-24AA-1C1F-087FF1708D80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ED864305-E476-24AA-1C1F-087FF1708D80}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ED864305-E476-24AA-1C1F-087FF1708D80}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ED864305-E476-24AA-1C1F-087FF1708D80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A37EA921-6F99-10C5-5663-63008C5A3916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A37EA921-6F99-10C5-5663-63008C5A3916}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A37EA921-6F99-10C5-5663-63008C5A3916}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A37EA921-6F99-10C5-5663-63008C5A3916}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
