@@ -1,5 +1,8 @@
 sceneSetups:
 <<<<<<< HEAD
+- path: Assets/scenes/Gluttony.unity
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 - path: Assets/scenes/Wrath.unity
@@ -26,5 +29,6 @@ sceneSetups:
 >>>>>>> e1395b73f22d53ea9ad5732413be7d1818d9d9a5
 >>>>>>> 9a4270fdc2942215ac9f598dc3ca011431d47207
 >>>>>>> parent of 6086add... Rename in MainRoomControls script
+>>>>>>> 558aecc8c9fe1fe0592f7b8683bb97ca3c3fbfb1
   isLoaded: 1
   isActive: 1
