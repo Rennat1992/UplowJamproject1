@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CameraScript : MonoBehaviour
+public class GreedCameraScript : MonoBehaviour
 {
 
     public GameObject player;
