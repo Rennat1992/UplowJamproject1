@@ -55,7 +55,6 @@
   <ItemGroup>
      <Compile Include="Assets\scripts\CameraScript.cs" />
      <Compile Include="Assets\scripts\GameController.cs" />
-     <Compile Include="Assets\scripts\GlutSlopeSlide.cs" />
      <Compile Include="Assets\scripts\SlothCameraMinigame.cs" />
      <Compile Include="Assets\scripts\SlothGameControlsScript.cs" />
  <Reference Include="UnityEditor.StandardEvents">
