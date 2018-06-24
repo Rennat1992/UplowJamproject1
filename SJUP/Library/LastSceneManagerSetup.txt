@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/scenes/BryceTest.unity
+=======
+- path: Assets/scenes/Wrath.unity
+>>>>>>> 2585a4de8dbe1e5a3f17e2bcd08a6322955c0754
   isLoaded: 1
   isActive: 1
