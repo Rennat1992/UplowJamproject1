@@ -6,10 +6,10 @@ public class SlothGameControlsScript : MonoBehaviour
 {
     public static float MAX_SPEED = 10000f;
 
-
+    [HideInInspector]
+    public bool facingRight = true;
     [HideInInspector]
     public bool jump = true;
-
 
     public float moveForce { get; set; }
     public float speed = .01f;
@@ -17,10 +17,8 @@ public class SlothGameControlsScript : MonoBehaviour
     public float speedUpCheckpoint = 1000f;
     public float speedMultiplier = 1.5f;
     public Transform groundCheck;
-    public Collider2D myCollider;
-    public LayerMask whatIsGround;
-    public bool grounded = false;
 
+    //private bool grounded = false;
     private Animator anim;
     private Rigidbody2D rb2d;
     private float speedUpCount = 0;
@@ -31,40 +29,52 @@ public class SlothGameControlsScript : MonoBehaviour
         jump = false;
         rb2d = GetComponent<Rigidbody2D>();
         rb2d.velocity = new Vector2(10, rb2d.velocity.y);
-        myCollider = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Checks if player is on ground
-        grounded = Physics2D.IsTouchingLayers(myCollider, whatIsGround);
-
-        //incrementing speed and checkpoint distance to keep time with each speed consistent
+<<<<<<< HEAD
         if (transform.position.x > speedUpCount)
         {
             speed *= speedMultiplier;
             speedUpCheckpoint *= speedMultiplier;
             speedUpCount += speedUpCheckpoint;
-
+            
         }
-        
-        //Set speed
+        grounded = Physics2D.IsTouchingLayers(myCollider, whatIsGround);
+
         rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
 
-        //Check if the player attempts to jump while grounded
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+=======
+
+        rb2d.velocity = new Vector2(rb2d.velocity.x + speed, rb2d.velocity.y);
+>>>>>>> 440e25a76b1e5b86fb94176b6a52660aa22bf2af
+        if (Input.GetKeyDown(KeyCode.Space) /*&& grounded*/)
         {
             jump = true;
             rb2d.gravityScale = 10;
-
+            
         }
     }
 
     void FixedUpdate()
     {
+        //float h = Input.GetAxis("Horizontal");
+        //anim.SetFloat("Speed", Mathf.Abs(h));
 
-        //jump mechanics
+
+        /*if (h * rb2d.velocity.x < maxSpeed)
+            rb2d.velocity = new Vector2(h * maxSpeed, rb2d.velocity.y);*/
+
+        /*
+        if (h > 0 && !facingRight)
+            Flip();
+
+        if (h < 0 && facingRight)
+            Flip();
+        */
+
         if (jump)
         {
             rb2d.gravityScale = 10;
@@ -81,4 +91,14 @@ public class SlothGameControlsScript : MonoBehaviour
     }
 
 
+    /*
+    void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+    }
+
+    */
 }
