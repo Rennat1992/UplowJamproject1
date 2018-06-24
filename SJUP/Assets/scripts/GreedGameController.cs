@@ -88,16 +88,7 @@ public class GreedGameController : MonoBehaviour {
             SlotCanvas.alpha = 1;
             SlotCanvas.blocksRaycasts = true;
             SlotCanvas.interactable = true;
+            GreedSpinToWin.GreedSpinToWinSingle.slotMachine = true;
         }
     }
-
-    //private void OnCollisionExit2D(Collision2D col)
-    //{
-    //    if (col.gameObject.name == "Slots")
-    //    {
-    //        SlotCanvas.alpha = 0;
-    //        SlotCanvas.blocksRaycasts = false;
-    //        SlotCanvas.interactable = false;
-    //    }
-    //}
 }
