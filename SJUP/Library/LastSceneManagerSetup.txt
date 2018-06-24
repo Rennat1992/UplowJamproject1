@@ -1,24 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/scenes/Wrath.unity
-=======
-<<<<<<< HEAD
-- path: Assets/scenes/Gluttony.unity
-=======
-<<<<<<< HEAD
-- path: Assets/scenes/Sloth.unity
-=======
-<<<<<<< HEAD
-- path: Assets/scenes/Wrath.unity
-=======
-<<<<<<< HEAD
-- path: Assets/scenes/Gluttony.unity
-=======
-- path: Assets/scenes/TestArea.unity
->>>>>>> a3ed7adb9d11545a20579d840f134e27c77294bc
->>>>>>> f0b8cce9fe679061e7d3e780d6af16c14f3b55c0
->>>>>>> 440e25a76b1e5b86fb94176b6a52660aa22bf2af
->>>>>>> e1395b73f22d53ea9ad5732413be7d1818d9d9a5
->>>>>>> 9a4270fdc2942215ac9f598dc3ca011431d47207
+- path: Assets/scenes/MainRoom.unity
   isLoaded: 1
   isActive: 1
