@@ -5,7 +5,7 @@ using UnityEngine;
 public class WrathCharacterShoot : MonoBehaviour {
 
 	public float fireRate = 0;
-	public float Damage = 10;
+	public int Damage = 34;
 	public LayerMask whatToHit;
 
 	public Transform BulletTrailPrefab;
@@ -48,7 +48,11 @@ public class WrathCharacterShoot : MonoBehaviour {
 		Debug.DrawLine (firePointPosition, (mousePosition-firePointPosition)*100, Color.cyan, 4);
 		if (hit.collider != null) {
 			Debug.DrawLine (firePointPosition, hit.point, Color.red, 2);
-			Debug.Log ("We hit " + hit.collider.name + " and did " + Damage + " damage.");
+			WrathEnemy enemy = hit.collider.GetComponent<WrathEnemy> ();
+			if (enemy != null) {
+				enemy.DamageEnemy (Damage);
+				Debug.Log ("We hit " + hit.collider.name + " and did " + Damage + " damage.");
+			}
 		}
 	}
 
