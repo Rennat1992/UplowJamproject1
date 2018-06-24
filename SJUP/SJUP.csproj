@@ -306,10 +306,13 @@
     <Compile Include="Assets\scripts\GreedCameraScript.cs" />
     <Compile Include="Assets\scripts\GreedGameController.cs" />
     <Compile Include="Assets\scripts\GreedSlotExit.cs" />
+    <Compile Include="Assets\scripts\MainRoomControls.cs" />
     <Compile Include="Assets\scripts\SlothCameraMinigame.cs" />
     <Compile Include="Assets\scripts\SlothGameControlsScript.cs" />
     <Compile Include="Assets\scripts\WrathCharacterMovement.cs" />
     <Compile Include="Assets\scripts\WrathCharacterRotation.cs" />
+    <Compile Include="Assets\scripts\WrathCharacterShoot.cs" />
+    <Compile Include="Assets\scripts\WrathMoveBulletTrail.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="C:\Users\Rupert\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Dark.uss" />
