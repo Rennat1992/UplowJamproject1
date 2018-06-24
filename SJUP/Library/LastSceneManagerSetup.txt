@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/scenes/Gluttony.unity
+=======
+- path: Assets/scenes/Greed.unity
+>>>>>>> 50390f7c4705df54252451cee29fd4c9f0ed152a
   isLoaded: 1
   isActive: 1
