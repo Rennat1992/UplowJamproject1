@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scenes/Wrath.unity
+- path: Assets/scenes/TestArea.unity
   isLoaded: 1
   isActive: 1
