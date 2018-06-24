@@ -307,6 +307,7 @@
     <Compile Include="Assets\scripts\GreedCameraScript.cs" />
     <Compile Include="Assets\scripts\GreedGameController.cs" />
     <Compile Include="Assets\scripts\GreedSlotExit.cs" />
+    <Compile Include="Assets\scripts\GreedSpinToWin.cs" />
     <Compile Include="Assets\scripts\MainRoomControls.cs" />
     <Compile Include="Assets\scripts\SlothCameraMinigame.cs" />
     <Compile Include="Assets\scripts\SlothGameControlsScript.cs" />

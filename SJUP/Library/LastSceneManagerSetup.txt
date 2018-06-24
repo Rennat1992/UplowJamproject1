@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/scenes/Sloth.unity
+=======
+- path: Assets/scenes/Wrath.unity
+>>>>>>> 00b42000e9e558f7c7d06179ebf96a59e8031569
   isLoaded: 1
   isActive: 1

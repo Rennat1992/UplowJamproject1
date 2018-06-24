@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WrathMoveBulletTrail : MonoBehaviour {
 
-	public int moveSpeed = 230;
+	public int moveSpeed = 430;
 	// Update is called once per frame
 	void Update () {
 		transform.Translate (Vector3.forward * Time.deltaTime * moveSpeed);
