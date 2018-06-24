@@ -61,6 +61,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\scripts\GluttonyBodyBitsPlugins.cs" />
+    <Compile Include="Assets\scripts\GluttonyGameController.cs" />
     <Compile Include="Assets\scripts\GluttonyPatrol.cs" />
     <Compile Include="Assets\scripts\GreedCameraScript.cs" />
     <Compile Include="Assets\scripts\GreedGameController.cs" />
@@ -68,9 +70,12 @@
     <Compile Include="Assets\scripts\MainRoomControls.cs" />
     <Compile Include="Assets\scripts\SlothCameraMinigame.cs" />
     <Compile Include="Assets\scripts\SlothGameControlsScript.cs" />
+    <Compile Include="Assets\scripts\WrathCharacter.cs" />
     <Compile Include="Assets\scripts\WrathCharacterMovement.cs" />
     <Compile Include="Assets\scripts\WrathCharacterRotation.cs" />
     <Compile Include="Assets\scripts\WrathCharacterShoot.cs" />
+    <Compile Include="Assets\scripts\WrathEnemy.cs" />
+    <Compile Include="Assets\scripts\WrathMaster.cs" />
     <Compile Include="Assets\scripts\WrathMoveBulletTrail.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Valerie Maule/Desktop/testys/UplowJamproject1/SJUP/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
