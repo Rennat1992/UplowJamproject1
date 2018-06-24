@@ -42,6 +42,11 @@ public class WrathEnemy : MonoBehaviour {
 
 	void Update ()
 	{
+
+		if (player == null) {
+			WrathMaster.KillEnemy (this);
+		}
+
 		Vector2 difference = player.position - transform.position;		//subtracting the position of the player from the mouse position
 		float rotZ = Mathf.Atan2 (difference.y, difference.x) * Mathf.Rad2Deg;	// find the angle in degrees
 		transform.rotation = Quaternion.Euler (0f, 0f, rotZ + rotationOffset);
@@ -57,9 +62,5 @@ public class WrathEnemy : MonoBehaviour {
 
 	void Shoot() {
 		Instantiate (BulletTrailPrefab, firePoint.position, firePoint.rotation);
-	}
-
-	public void enableShooter() {
-		isShooter = true;
 	}
 }
