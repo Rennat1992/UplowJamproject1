@@ -1,12 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/scenes/Wrath.unity
-=======
-<<<<<<< HEAD
-- path: Assets/scenes/Gluttony.unity
-=======
-- path: Assets/scenes/Greed.unity
->>>>>>> 50390f7c4705df54252451cee29fd4c9f0ed152a
->>>>>>> 6ab6e73d4083b8de27860138f764763c7018ec64
   isLoaded: 1
   isActive: 1

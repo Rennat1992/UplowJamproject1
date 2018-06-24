@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GluttonyBodyBitsPlugins : MonoBehaviour
 {
-    public float Damage = 10;
-    public float fireRate = 0;
+    public float Damage = 10f;
+    public float fireRate = 0f;
     public LayerMask notToHit;
 
     float timeToFire = 0;
@@ -32,10 +32,10 @@ public class GluttonyBodyBitsPlugins : MonoBehaviour
         }
         else
         {
-            if (Input.GetButton ("Fire1") && timeToFire.time > timeToFire)
+            if (Input.GetButton ("Fire1") && Time.time > timeToFire)
             {
-                timeToFire = timeToFire.time + 1 / fireRate;
-                shoot();
+                timeToFire = Time.time + 1 / fireRate;
+                Shoot();
             }
         }
     }
