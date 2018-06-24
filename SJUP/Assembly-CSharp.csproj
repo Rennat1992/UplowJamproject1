@@ -61,19 +61,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-=======
     <Compile Include="Assets\scripts\GluttonyPatrol.cs" />
->>>>>>> ef2980e560798f73718707740cfabcd4c4b4d83f
     <Compile Include="Assets\scripts\GreedCameraScript.cs" />
     <Compile Include="Assets\scripts\GreedGameController.cs" />
     <Compile Include="Assets\scripts\GreedSlotExit.cs" />
     <Compile Include="Assets\scripts\MainRoomControls.cs" />
     <Compile Include="Assets\scripts\SlothCameraMinigame.cs" />
-    <Compile Include="Assets\scripts\SlothGameControlsScript.cs" />
+    <Compile Include="Assets\scripts\SlothGameManager.cs" />
+    <Compile Include="Assets\scripts\SlothPlayerController.cs" />
+    <Compile Include="Assets\scripts\WrathCharacter.cs" />
     <Compile Include="Assets\scripts\WrathCharacterMovement.cs" />
     <Compile Include="Assets\scripts\WrathCharacterRotation.cs" />
     <Compile Include="Assets\scripts\WrathCharacterShoot.cs" />
+    <Compile Include="Assets\scripts\WrathEnemy.cs" />
+    <Compile Include="Assets\scripts\WrathMaster.cs" />
     <Compile Include="Assets\scripts\WrathMoveBulletTrail.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/bfowl/Desktop/GitHub/SlowJam/UplowJamproject1/SJUP/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
