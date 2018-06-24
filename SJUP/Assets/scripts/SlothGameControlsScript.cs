@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class SlothGameControlsScript : MonoBehaviour
 {
-    public static float MAX_SPEED = 10000f;
+    public static float INC_SPEED = 10;
 
-    [HideInInspector]
-    public bool facingRight = true;
     [HideInInspector]
     public bool jump = true;
+    public bool grounded = false;
+    public LayerMask whatIsGround;
 
     public float moveForce { get; set; }
-    public float speed = .01f;
+    public float speed = 10f;
     public float jumpForce = 100f;
     public Transform groundCheck;
+
+    private Collider2D myCollider;
+
 
     //private bool grounded = false;
     private Animator anim;
@@ -25,14 +28,17 @@ public class SlothGameControlsScript : MonoBehaviour
     {
         jump = false;
         rb2d = GetComponent<Rigidbody2D>();
-        rb2d.velocity = new Vector2(10, rb2d.velocity.y);
+        rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
+        myCollider = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        grounded = Physics2D.IsTouchingLayers(myCollider, whatIsGround);
 
-        rb2d.velocity = new Vector2(rb2d.velocity.x + speed, rb2d.velocity.y);
+
+        rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
         if (Input.GetKeyDown(KeyCode.Space) /*&& grounded*/)
         {
             jump = true;
@@ -43,22 +49,7 @@ public class SlothGameControlsScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        //float h = Input.GetAxis("Horizontal");
-        //anim.SetFloat("Speed", Mathf.Abs(h));
-
-
-        /*if (h * rb2d.velocity.x < maxSpeed)
-            rb2d.velocity = new Vector2(h * maxSpeed, rb2d.velocity.y);*/
-
-        /*
-        if (h > 0 && !facingRight)
-            Flip();
-
-        if (h < 0 && facingRight)
-            Flip();
-        */
-
-        if (jump)
+        if (jump && grounded)
         {
             rb2d.gravityScale = 10;
             if (rb2d.velocity.y < 0)
@@ -70,6 +61,7 @@ public class SlothGameControlsScript : MonoBehaviour
             if (Mathf.Sign(rb2d.velocity.y) > 1.2f)
                 rb2d.velocity = new Vector2(rb2d.velocity.x, Mathf.Sign(rb2d.velocity.y) * 0.2f);
             jump = false;
+            
         }
 
         if (Mathf.Sign(rb2d.velocity.x) > 15f)
@@ -77,16 +69,4 @@ public class SlothGameControlsScript : MonoBehaviour
             rb2d.velocity = new Vector2(Mathf.Sign(rb2d.velocity.x) * 0.995f, rb2d.velocity.y);
         }
     }
-
-
-    /*
-    void Flip()
-    {
-        facingRight = !facingRight;
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
-    }
-
-    */
 }
