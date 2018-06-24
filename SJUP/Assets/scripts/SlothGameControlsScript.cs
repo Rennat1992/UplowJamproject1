@@ -34,7 +34,6 @@ public class SlothGameControlsScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
         if (transform.position.x > speedUpCount)
         {
             speed *= speedMultiplier;
@@ -42,14 +41,11 @@ public class SlothGameControlsScript : MonoBehaviour
             speedUpCount += speedUpCheckpoint;
             
         }
-        grounded = Physics2D.IsTouchingLayers(myCollider, whatIsGround);
+        //grounded = Physics2D.IsTouchingLayers(myCollider, whatIsGround);
 
         rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
 
-=======
-
         rb2d.velocity = new Vector2(rb2d.velocity.x + speed, rb2d.velocity.y);
->>>>>>> 440e25a76b1e5b86fb94176b6a52660aa22bf2af
         if (Input.GetKeyDown(KeyCode.Space) /*&& grounded*/)
         {
             jump = true;
