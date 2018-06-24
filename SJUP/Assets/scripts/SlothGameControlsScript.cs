@@ -14,11 +14,14 @@ public class SlothGameControlsScript : MonoBehaviour
     public float moveForce { get; set; }
     public float speed = .01f;
     public float jumpForce = 100f;
+    public float speedUpCheckpoint = 1000f;
+    public float speedMultiplier = 1.5f;
     public Transform groundCheck;
 
     //private bool grounded = false;
     private Animator anim;
     private Rigidbody2D rb2d;
+    private float speedUpCount = 0;
 
     // Use this for initialization
     void Start()
@@ -31,8 +34,22 @@ public class SlothGameControlsScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
+        if (transform.position.x > speedUpCount)
+        {
+            speed *= speedMultiplier;
+            speedUpCheckpoint *= speedMultiplier;
+            speedUpCount += speedUpCheckpoint;
+            
+        }
+        grounded = Physics2D.IsTouchingLayers(myCollider, whatIsGround);
+
+        rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
+
+=======
 
         rb2d.velocity = new Vector2(rb2d.velocity.x + speed, rb2d.velocity.y);
+>>>>>>> 440e25a76b1e5b86fb94176b6a52660aa22bf2af
         if (Input.GetKeyDown(KeyCode.Space) /*&& grounded*/)
         {
             jump = true;
@@ -70,11 +87,6 @@ public class SlothGameControlsScript : MonoBehaviour
             if (Mathf.Sign(rb2d.velocity.y) > 1.2f)
                 rb2d.velocity = new Vector2(rb2d.velocity.x, Mathf.Sign(rb2d.velocity.y) * 0.2f);
             jump = false;
-        }
-
-        if (Mathf.Sign(rb2d.velocity.x) > 15f)
-        {
-            rb2d.velocity = new Vector2(Mathf.Sign(rb2d.velocity.x) * 0.995f, rb2d.velocity.y);
         }
     }
 
