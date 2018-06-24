@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/scenes/Gluttony.unity
-=======
-- path: Assets/scenes/TestArea.unity
->>>>>>> a3ed7adb9d11545a20579d840f134e27c77294bc
   isLoaded: 1
   isActive: 1
