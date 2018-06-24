@@ -30,6 +30,9 @@ public class WrathEnemy : MonoBehaviour {
 
 	void Start ()
 	{
+		if (isShooter) {
+			stats.Health = 100;
+		}
 		player = GameObject.FindWithTag("Player").transform;
 		firePoint = transform.Find ("FirePoint");
 		if (firePoint == null) {
@@ -54,5 +57,9 @@ public class WrathEnemy : MonoBehaviour {
 
 	void Shoot() {
 		Instantiate (BulletTrailPrefab, firePoint.position, firePoint.rotation);
+	}
+
+	public void enableShooter() {
+		isShooter = true;
 	}
 }
