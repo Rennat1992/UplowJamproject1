@@ -8,6 +8,5 @@ public class DestroyByBoundary : MonoBehaviour
     {
         // Destroy everything that leaves the trigger
         Destroy(other.gameObject); 
-            transform.Translate(Vector2.up * 10);
     }
 }
