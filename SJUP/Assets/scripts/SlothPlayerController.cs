@@ -36,9 +36,9 @@ public class SlothPlayerController : MonoBehaviour
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        rb2d.velocity = new Vector2(0, rb2d.velocity.y);
+        rb2d.velocity = new Vector2 (speed, rb2d.velocity.y);
         myCollider = GetComponent<Collider2D>();
-       // speedUpCount = speedUpCheckpoint;
+        speedUpCount = speedUpCheckpoint;
         jumpTimeCount = jumpTime;
         playerStartPoint = rb2d.position;
        // oldXPosition = rb2d.position.x - 1;
@@ -49,7 +49,7 @@ public class SlothPlayerController : MonoBehaviour
     {
 
         //Update velocity
-        rb2d.velocity = new Vector2(0, rb2d.velocity.y);
+        rb2d.velocity = new Vector2 (speed, rb2d.velocity.y);
 
         //Check if player is moving or stopped by wall - BROKEN
         moving = (rb2d.position.x < 0);
@@ -62,14 +62,14 @@ public class SlothPlayerController : MonoBehaviour
 
         //Checks if player is on the ground
         //grounded = Physics2D.IsTouchingLayers(myCollider, whatIsGround);
-        
-        ////If player reaches checkpoint, scale the speed and distance to next checkpoint
-        //if (rb2d.position.x > speedUpCount)
-        //{
-        //    speed *= speedMultiplier;
-        //    speedUpCheckpoint *= speedMultiplier;
-        //    speedUpCount += speedUpCheckpoint;
-        //}
+
+        //If player reaches checkpoint, scale the speed and distance to next checkpoint
+        if (rb2d.position.x > speedUpCount)
+        {
+            speed *= speedMultiplier;
+            speedUpCheckpoint *= speedMultiplier;
+            speedUpCount += speedUpCheckpoint;
+        }
 
         //Checks if player presses jump and is able to jump
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
@@ -108,10 +108,10 @@ public class SlothPlayerController : MonoBehaviour
     //Stuff for restarting the game post death
     public IEnumerator RestartGameCo()
     {
-        rb2d.velocity = new Vector2(0, 0);
+        rb2d.velocity = new Vector2(speed, 0);
         yield return new WaitForSeconds(2f);
         rb2d.position = playerStartPoint;
-        rb2d.velocity = new Vector2(0, 0);
+        rb2d.velocity = new Vector2(speed, 0);
         oldXPosition = rb2d.position.x - 1;
     }
 
