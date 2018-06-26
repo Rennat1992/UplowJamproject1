@@ -2,6 +2,10 @@ Base path: C:/Program Files/Unity/Editor/Data
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6dc5ba424c6d7f2962d59c7d1dabcf7e445ae9a1
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
@@ -23,6 +27,7 @@ Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
+<<<<<<< HEAD
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
@@ -38,3 +43,7 @@ Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
+=======
+=======
+>>>>>>> 0aab358a89d1706556a23407642764841aeac6d2
+>>>>>>> 6dc5ba424c6d7f2962d59c7d1dabcf7e445ae9a1
