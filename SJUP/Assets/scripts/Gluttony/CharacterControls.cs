@@ -14,9 +14,9 @@ public class Boundary
 
     public GameObject shot;
     public Transform shotSpawn;
-    public float fireRate = 0F;
+    public float fireRate;
 
-    private float nextFire = .25F;
+    private float nextFire;
 
     //To allow Player to shoot
     void Update()
