@@ -20,6 +20,8 @@ public class SlothPlayerController : MonoBehaviour
     public Rigidbody2D rb2d;
     public SlothGameManager gameManager;
 
+    public AudioSource jumpSound;
+    public AudioSource deathSound;
 
     public bool grounded = false;
     public bool moving = false;
@@ -55,7 +57,7 @@ public class SlothPlayerController : MonoBehaviour
         //checks if player died
         if ((rb2d.position.y < deathHeight) || !moving)
         {
-            StartCoroutine(RestartGameCo());
+           // StartCoroutine(RestartGameCo());
         }
 
         //Checks if player is on the ground
@@ -73,6 +75,8 @@ public class SlothPlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             rb2d.AddForce(new Vector2(rb2d.velocity.x, jumpForce));
+            jumpSound.Stop ();
+            jumpSound.Play ();
         }
 
         //Checks if player holds down space for long jump
