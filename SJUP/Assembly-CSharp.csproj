@@ -65,18 +65,12 @@
     <Compile Include="Assets\scripts\Gluttony\CharacterControls.cs" />
     <Compile Include="Assets\scripts\Gluttony\GluttonyBodyBitsPlugins.cs" />
     <Compile Include="Assets\scripts\Gluttony\GluttonyPatrol.cs" />
-<<<<<<< HEAD
     <Compile Include="Assets\scripts\Gluttony\Mover.cs" />
-    <Compile Include="Assets\scripts\GreedCameraScript.cs" />
-    <Compile Include="Assets\scripts\GreedGameController.cs" />
-    <Compile Include="Assets\scripts\GreedSlotExit.cs" />
-    <Compile Include="Assets\scripts\GreedSpinToWin.cs" />
-=======
     <Compile Include="Assets\scripts\Greed\GreedCameraScript.cs" />
     <Compile Include="Assets\scripts\Greed\GreedGameController.cs" />
+    <Compile Include="Assets\scripts\Greed\GreedGameData.cs" />
     <Compile Include="Assets\scripts\Greed\GreedSlotExit.cs" />
     <Compile Include="Assets\scripts\Greed\GreedSpinToWin.cs" />
->>>>>>> ce8eaed0151c2f9266b1be5b4f988cff12bd275e
     <Compile Include="Assets\scripts\MainRoomControls.cs" />
     <Compile Include="Assets\scripts\SlothCameraMinigame.cs" />
     <Compile Include="Assets\scripts\SlothDestroyer.cs" />
@@ -94,10 +88,10 @@
     <Compile Include="Assets\scripts\WrathMaster.cs" />
     <Compile Include="Assets\scripts\WrathMoveBulletTrail.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/bfowl/Desktop/GitHub/SlowJam/UplowJamproject1/SJUP/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Valerie Maule/Desktop/testys/UplowJamproject1/SJUP/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/bfowl/Desktop/GitHub/SlowJam/UplowJamproject1/SJUP/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Valerie Maule/Desktop/testys/UplowJamproject1/SJUP/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -274,7 +268,7 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
     </Reference>
     <Reference Include="Facebook.Unity.Settings">
-      <HintPath>C:/Users/bfowl/Desktop/GitHub/SlowJam/UplowJamproject1/SJUP/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+      <HintPath>C:/Users/Valerie Maule/Desktop/testys/UplowJamproject1/SJUP/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
@@ -298,13 +292,13 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Users/bfowl/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
+      <HintPath>C:/Users/Valerie Maule/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing">
-      <HintPath>C:/Users/bfowl/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.1/UnityEngine.Purchasing.dll</HintPath>
+      <HintPath>C:/Users/Valerie Maule/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.1/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
-      <HintPath>C:/Users/bfowl/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Valerie Maule/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
