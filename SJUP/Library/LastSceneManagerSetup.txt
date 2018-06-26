@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-sceneSetups: []
-=======
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/scenes/Greed.unity
-=======
-<<<<<<< HEAD
-- path: Assets/scenes/Sloth.unity
-=======
-- path: Assets/scenes/Gluttony.unity
->>>>>>> 0aab358a89d1706556a23407642764841aeac6d2
->>>>>>> 6dc5ba424c6d7f2962d59c7d1dabcf7e445ae9a1
   isLoaded: 1
   isActive: 1
->>>>>>> 2d57b37d926f1f8bf6b39ec5fb838ac8b4296384
