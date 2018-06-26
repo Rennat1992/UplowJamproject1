@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/scenes/Sloth.unity
+=======
+- path: Assets/scenes/Greed.unity
+>>>>>>> 068c28bb10ac041e08233ef696cc091ee9b3ece1
   isLoaded: 1
   isActive: 1
