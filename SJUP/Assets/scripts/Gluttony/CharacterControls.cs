@@ -7,7 +7,7 @@ public class CharacterControls : MonoBehaviour
     [SerializeField]
 public class Boundary
     {
-        public float xMin, xMax;
+        public float xMin, xMax, zMin, zMax;
     }
     private float moveSpeed = 5f;
     public Boundary boundary;
@@ -21,13 +21,14 @@ public class Boundary
     //To allow Player to shoot
     void Update()
     {
-        if (Input.GetButton("Fire1") && Time.time > nextFire)
+        if (Input.GetButton("Fire1") && Time.time > nextFire) { 
             nextFire = Time.time + fireRate;
  //           GameObject clone = 
                 Instantiate(shot, shotSpawn.position, shotSpawn.rotation); // as GameObject
+         }
     }
 
-   
+
     // Use this for initialization
     void Start()
     {
