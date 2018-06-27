@@ -180,6 +180,7 @@ public class GreedSpinToWin : MonoBehaviour
 
             //Check for rewards
             ACrossRewards();
+            DiagonalReward();
             buttonPress.interactable = true;
         }
 
@@ -188,21 +189,16 @@ public class GreedSpinToWin : MonoBehaviour
 
     void ACrossRewards()
     {
-        //Find names of sprite image
-        //Debug.Log(imageSlot1.sprite.name.ToString());
-        //Debug.Log(imageSlot1.sprite.name.ToString());
-        //Debug.Log(imageSlot1.sprite.name.ToString());
-
         int mult;
 
         //slots 1->3 TRIPLE
         if ((imageSlot1.sprite.ToString() == imageSlot2.sprite.ToString()) && (imageSlot2.sprite.ToString() == imageSlot3.sprite.ToString()))
         {
             //Are they really all the same :thinking:
-            //Debug.Log("ALL");
-            //Debug.Log(imageSlot1.sprite.name.ToString());
-            //Debug.Log(imageSlot1.sprite.name.ToString());
-            //Debug.Log(imageSlot1.sprite.name.ToString());
+            Debug.Log("TRIPLE(1-3)");
+            Debug.Log(imageSlot1.sprite.name.ToString());
+            Debug.Log(imageSlot1.sprite.name.ToString());
+            Debug.Log(imageSlot1.sprite.name.ToString());
 
             //Assign Score multiple
             if (imageSlot1.sprite.name.ToString() == "1")
@@ -225,7 +221,7 @@ public class GreedSpinToWin : MonoBehaviour
         else if ((imageSlot1.sprite.name.ToString() == imageSlot2.sprite.name.ToString()) || (imageSlot1.sprite.name.ToString() == imageSlot3.sprite.name.ToString()) || (imageSlot2.sprite.name.ToString() == imageSlot3.sprite.name.ToString()))
         {
             //Are they really all the same :thinking:
-            Debug.Log("MOTHERFUCKING PAIR BITCHES!!!");
+            Debug.Log("MOTHERFUCKING PAIR BITCHES!!!(1-3)");
             Debug.Log(imageSlot1.sprite.ToString());
             Debug.Log(imageSlot2.sprite.ToString());
             Debug.Log(imageSlot3.sprite.ToString());
@@ -276,10 +272,10 @@ public class GreedSpinToWin : MonoBehaviour
             if ((imageSlot4.sprite.ToString() == imageSlot5.sprite.ToString()) && (imageSlot5.sprite.ToString() == imageSlot6.sprite.ToString()))
             {
                 //Are they really all the same :thinking:
-                //Debug.Log("ALL");
-                //Debug.Log(imageSlot1.sprite.name.ToString());
-                //Debug.Log(imageSlot1.sprite.name.ToString());
-                //Debug.Log(imageSlot1.sprite.name.ToString());
+                Debug.Log("Triple(4-6)");
+                Debug.Log(imageSlot1.sprite.name.ToString());
+                Debug.Log(imageSlot1.sprite.name.ToString());
+                Debug.Log(imageSlot1.sprite.name.ToString());
 
                 //Assign Score multiple
                 if (imageSlot4.sprite.name.ToString() == "1")
@@ -302,7 +298,7 @@ public class GreedSpinToWin : MonoBehaviour
             else if ((imageSlot4.sprite.name.ToString() == imageSlot5.sprite.name.ToString()) || (imageSlot4.sprite.name.ToString() == imageSlot6.sprite.name.ToString()) || (imageSlot5.sprite.name.ToString() == imageSlot6.sprite.name.ToString()))
             {
                 //Are they really all the same :thinking:
-                Debug.Log("MOTHERFUCKING PAIR BITCHES!!!");
+                Debug.Log("MOTHERFUCKING PAIR BITCHES!!!(4-6)");
                 Debug.Log(imageSlot4.sprite.ToString());
                 Debug.Log(imageSlot5.sprite.ToString());
                 Debug.Log(imageSlot6.sprite.ToString());
@@ -327,33 +323,14 @@ public class GreedSpinToWin : MonoBehaviour
                     GreedGameData.GreedGameDataSingle.score += 50 * mult;
                     GameObject.Find("Score").GetComponent<Text>().text = "Score: " + GreedGameData.GreedGameDataSingle.score.ToString();
                 }
-                else if (imageSlot4.sprite.name.ToString() == imageSlot6.sprite.name.ToString())
+                else if ((imageSlot4.sprite.name.ToString() == imageSlot6.sprite.name.ToString()) || (imageSlot5.sprite.name.ToString() == imageSlot6.sprite.name.ToString()))
                 {
                     //Assign Score multiple
-                    if (imageSlot4.sprite.name.ToString() == "1")
+                    if (imageSlot6.sprite.name.ToString() == "1")
                         mult = 1;
-                    else if (imageSlot4.sprite.name.ToString() == "2")
+                    else if (imageSlot6.sprite.name.ToString() == "2")
                         mult = 2;
-                    else if (imageSlot4.sprite.name.ToString() == "3")
-                        mult = 3;
-                    else
-                    {
-                        Debug.Log("ERROR WITH SCORE!!!!");
-                        mult = 0;
-                    }
-
-                    //Update score
-                    GreedGameData.GreedGameDataSingle.score += 50 * mult;
-                    GameObject.Find("Score").GetComponent<Text>().text = "Score: " + GreedGameData.GreedGameDataSingle.score.ToString();
-                }
-                else if (imageSlot4.sprite.name.ToString() == imageSlot6.sprite.name.ToString())
-                {
-                    //Assign Score multiple
-                    if (imageSlot4.sprite.name.ToString() == "1")
-                        mult = 1;
-                    else if (imageSlot4.sprite.name.ToString() == "2")
-                        mult = 2;
-                    else if (imageSlot4.sprite.name.ToString() == "3")
+                    else if (imageSlot6.sprite.name.ToString() == "3")
                         mult = 3;
                     else
                     {
@@ -371,10 +348,10 @@ public class GreedSpinToWin : MonoBehaviour
             if ((imageSlot7.sprite.ToString() == imageSlot8.sprite.ToString()) && (imageSlot8.sprite.ToString() == imageSlot9.sprite.ToString()))
             {
                 //Are they really all the same :thinking:
-                //Debug.Log("ALL");
-                //Debug.Log(imageSlot1.sprite.name.ToString());
-                //Debug.Log(imageSlot1.sprite.name.ToString());
-                //Debug.Log(imageSlot1.sprite.name.ToString());
+                Debug.Log("Triple(7-9)");
+                Debug.Log(imageSlot1.sprite.name.ToString());
+                Debug.Log(imageSlot1.sprite.name.ToString());
+                Debug.Log(imageSlot1.sprite.name.ToString());
 
                 //Assign Score multiple
                 if (imageSlot7.sprite.name.ToString() == "1")
@@ -397,7 +374,7 @@ public class GreedSpinToWin : MonoBehaviour
             else if ((imageSlot7.sprite.name.ToString() == imageSlot8.sprite.name.ToString()) || (imageSlot7.sprite.name.ToString() == imageSlot9.sprite.name.ToString()) || (imageSlot8.sprite.name.ToString() == imageSlot9.sprite.name.ToString()))
             {
                 //Are they really all the same :thinking:
-                Debug.Log("MOTHERFUCKING PAIR BITCHES!!!");
+                Debug.Log("MOTHERFUCKING PAIR BITCHES!!!(7-9)");
                 Debug.Log(imageSlot7.sprite.ToString());
                 Debug.Log(imageSlot8.sprite.ToString());
                 Debug.Log(imageSlot9.sprite.ToString());
@@ -422,33 +399,14 @@ public class GreedSpinToWin : MonoBehaviour
                     GreedGameData.GreedGameDataSingle.score += 50 * mult;
                     GameObject.Find("Score").GetComponent<Text>().text = "Score: " + GreedGameData.GreedGameDataSingle.score.ToString();
                 }
-                else if (imageSlot7.sprite.name.ToString() == imageSlot9.sprite.name.ToString())
+                else if ((imageSlot7.sprite.name.ToString() == imageSlot9.sprite.name.ToString())|| (imageSlot8.sprite.name.ToString() == imageSlot9.sprite.name.ToString()))
                 {
                     //Assign Score multiple
-                    if (imageSlot7.sprite.name.ToString() == "1")
+                    if (imageSlot9.sprite.name.ToString() == "1")
                         mult = 1;
-                    else if (imageSlot7.sprite.name.ToString() == "2")
+                    else if (imageSlot9.sprite.name.ToString() == "2")
                         mult = 2;
-                    else if (imageSlot7.sprite.name.ToString() == "3")
-                        mult = 3;
-                    else
-                    {
-                        Debug.Log("ERROR WITH SCORE!!!!");
-                        mult = 0;
-                    }
-
-                    //Update score
-                    GreedGameData.GreedGameDataSingle.score += 50 * mult;
-                    GameObject.Find("Score").GetComponent<Text>().text = "Score: " + GreedGameData.GreedGameDataSingle.score.ToString();
-                }
-                else if (imageSlot7.sprite.name.ToString() == imageSlot9.sprite.name.ToString())
-                {
-                    //Assign Score multiple
-                    if (imageSlot7.sprite.name.ToString() == "1")
-                        mult = 1;
-                    else if (imageSlot7.sprite.name.ToString() == "2")
-                        mult = 2;
-                    else if (imageSlot7.sprite.name.ToString() == "3")
+                    else if (imageSlot9.sprite.name.ToString() == "3")
                         mult = 3;
                     else
                     {
@@ -461,6 +419,34 @@ public class GreedSpinToWin : MonoBehaviour
                     GameObject.Find("Score").GetComponent<Text>().text = "Score: " + GreedGameData.GreedGameDataSingle.score.ToString();
                 }
             }
+        }
+    }
+
+    void DiagonalReward()
+    {
+        //score multiplier
+        int mult;
+
+        if ((imageSlot1.sprite.ToString() == imageSlot5.sprite.ToString()) && (imageSlot5.sprite.ToString() == imageSlot9.sprite.ToString()) || (imageSlot7.sprite.ToString() == imageSlot5.sprite.ToString()) && (imageSlot5.sprite.ToString() == imageSlot3.sprite.ToString()))
+        {
+            //Assign Score multiple
+            Debug.Log("Diag" + imageSlot5.sprite.name.ToString());
+
+            if (imageSlot5.sprite.name.ToString() == "1")
+                mult = 1;
+            else if (imageSlot5.sprite.name.ToString() == "2")
+                mult = 2;
+            else if (imageSlot5.sprite.name.ToString() == "3")
+                mult = 3;
+            else
+            {
+                Debug.Log("ERROR WITH SCORE!!!!");
+                mult = 0;
+            }
+
+            //Update score
+            GreedGameData.GreedGameDataSingle.score += 500 * mult;
+            GameObject.Find("Score").GetComponent<Text>().text = "Score: " + GreedGameData.GreedGameDataSingle.score.ToString();
         }
     }
 }
