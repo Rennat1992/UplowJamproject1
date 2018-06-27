@@ -310,6 +310,7 @@
     <Compile Include="Assets\scripts\Gluttony\GluttonyPatrol.cs" />
     <Compile Include="Assets\scripts\Gluttony\Mover.cs" />
     <Compile Include="Assets\scripts\Greed\GreedCameraScript.cs" />
+    <Compile Include="Assets\scripts\Greed\GreedCanvasSetup.cs" />
     <Compile Include="Assets\scripts\Greed\GreedGameController.cs" />
     <Compile Include="Assets\scripts\Greed\GreedGameData.cs" />
     <Compile Include="Assets\scripts\Greed\GreedSlotExit.cs" />

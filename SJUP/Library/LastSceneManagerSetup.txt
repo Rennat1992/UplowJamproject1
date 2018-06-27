@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scenes/MainRoom.unity
+- path: Assets/scenes/Greed.unity
   isLoaded: 1
   isActive: 1
