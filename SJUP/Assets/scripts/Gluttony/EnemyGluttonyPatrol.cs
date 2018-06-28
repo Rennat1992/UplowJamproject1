@@ -13,8 +13,8 @@ public class EnemyGluttonyPatrol : MonoBehaviour
     void Update() {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
         int layer_mask = LayerMask.GetMask("GroundInfo");
-        RayCastHit2D groundInfo = Physics2D.RayCast(groundDetection, Vector2.down, 10f);
-        if (groundInfo.collider.gameObject.tag == "ground") == false){
+        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, 10f);
+        if ((groundInfo.collider.gameObject.tag == "ground") == false){
                 if (movingRight == true)
                 {
                     transform.eulerAngles = new Vector3(0, -180, 0);
