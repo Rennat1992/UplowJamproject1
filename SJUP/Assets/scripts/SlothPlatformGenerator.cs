@@ -24,7 +24,7 @@ public class SlothPlatformGenerator : MonoBehaviour
 
 
 
-    public GameObject platform;
+    public GameObject thePlatform;
     public Transform generationPoint;
     public float distanceBetween;
 
@@ -35,13 +35,23 @@ public class SlothPlatformGenerator : MonoBehaviour
 
     public SlothObjectPooler theObjectPool;
 
+    //public GameObject[] thePlatforms;
+    private int platformSelector;
+    private float[] platformWidths;
+
+    public SlothObjectPooler[] theObjectPools;
 
     //Use this for initialization
 
     void Start()
     {
-        platformWidth = platform.GetComponent<BoxCollider2D>().size.x;
+        //platformWidths[i] = theObjectPools[i].pooledObject.GetComponent<BoxCollider2D>().size.x;
 
+        for (int i = 0; i < theObjectPools.Length; i++)
+        {
+            platformWidths[i] = theObjectPools[i].GetComponent<BoxCollider2D> ().size.x;
+
+        }
     }
 
     //Update is called once per frame
@@ -54,8 +64,10 @@ public class SlothPlatformGenerator : MonoBehaviour
 
             transform.position = new Vector3(transform.position.x + platformWidth + distanceBetween, transform.position.y, transform.position.z);
 
+            platformSelector = Random.Range(0, theObjectPools.Length);
+
             //Instantiate (platform, transform.position, transform.rotation);
-            GameObject newPlatform = theObjectPool.GetPooledObject ();
+            GameObject newPlatform = theObjectPools[platformSelector].GetPooledObject ();
 
             newPlatform.transform.position = transform.position;
             newPlatform.transform.rotation = transform.rotation;
