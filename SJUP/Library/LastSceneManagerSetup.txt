@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/scenes/Sloth.unity
-=======
-- path: Assets/scenes/MainRoom.unity
->>>>>>> f60469dff8e8f3aeb5da08e93798e79010dd2d28
   isLoaded: 1
   isActive: 1
