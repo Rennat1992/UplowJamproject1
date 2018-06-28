@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/scenes/Lust.unity
+=======
+- path: Assets/scenes/Gluttony.unity
+>>>>>>> 3ec6f746ab6d07307f2572abbb109ca9242f5f53
   isLoaded: 1
   isActive: 1
