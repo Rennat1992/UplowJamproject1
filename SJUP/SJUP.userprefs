@@ -1,8 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\MainPause Menu\MainRoomPauseMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Data\Dialogue.txt">
     <Files>
-      <File FileName="Assets\scripts\MainPause Menu\MainRoomPauseMenu.cs" Line="16" Column="1" />
+      <File FileName="Assets\scripts\MainPause Menu\MainRoomPauseMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Lust\DialogueManager.cs" Line="27" Column="18" />
+      <File FileName="Assets\Data\Dialogue.txt" Line="6" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
