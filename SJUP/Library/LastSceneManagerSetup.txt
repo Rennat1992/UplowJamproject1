@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scenes/Greed.unity
+- path: Assets/scenes/Lust.unity
   isLoaded: 1
   isActive: 1
