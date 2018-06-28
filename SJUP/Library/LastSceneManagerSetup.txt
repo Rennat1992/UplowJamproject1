@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/scenes/Sloth.unity
-=======
-- path: Assets/scenes/Lust.unity
->>>>>>> 02bffa83fc5ed83b061e01c39a22f73f7976c17f
   isLoaded: 1
   isActive: 1
