@@ -1,0 +1,6 @@
+Placeholder1;Placeholder Text 1;0;R
+Placeholder2;Placeholder Text 2;0;L
+Placeholder1;Placeholder Text 3;0;R
+Player;Restart:line,0;Continue:line,4
+Placeholder1,Placeholder Text 4;0;L
+Placeholder2,Placeholder Text 5;0;R
