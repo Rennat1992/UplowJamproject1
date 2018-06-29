@@ -22,6 +22,8 @@ public class GreedSlotExit : MonoBehaviour {
         SlotCanvas.alpha = 0;
         SlotCanvas.blocksRaycasts = false;
         SlotCanvas.interactable = false;
+
+        GameObject.Find("Player").GetComponent<MainRoomControls>().enabled = true;
     }
 
 }

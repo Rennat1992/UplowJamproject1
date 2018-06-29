@@ -20,6 +20,9 @@ public class MainRoomControls : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb2d;
 
+    //Wall transparent (cant spell)
+    private Color alph;
+
     // Use this for initialization
     void Start()
     {
@@ -85,6 +88,7 @@ public class MainRoomControls : MonoBehaviour
             Debug.Log("door");
             check = true;
         }
+        
     }
 
     private void OnCollisionExit2D(Collision2D col)
@@ -93,6 +97,12 @@ public class MainRoomControls : MonoBehaviour
         if (col.gameObject.name == "SlothDoor")
         {
             check = false;
+        }
+        if (col.gameObject.tag == "Wall")
+        {
+            alph = col.gameObject.GetComponent<SpriteRenderer>().color;
+            alph.a = 255f;
+            col.gameObject.GetComponent<SpriteRenderer>().color = alph;
         }
     }
 
