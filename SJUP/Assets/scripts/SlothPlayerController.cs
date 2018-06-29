@@ -47,6 +47,7 @@ public class SlothPlayerController : MonoBehaviour
         // oldXPosition = rb2d.position.x - 1;
         stoppedJumping = true;
         canDoubleJump = true;
+        anim = GetComponent<Animator> ();
     }
 
     // Update is called once per frame
@@ -123,6 +124,8 @@ public class SlothPlayerController : MonoBehaviour
             canDoubleJump = true;
         }
 
+        anim.SetBool("grounded", grounded);
+        anim.SetBool("canDoubleJump", canDoubleJump);
 
     }
 
