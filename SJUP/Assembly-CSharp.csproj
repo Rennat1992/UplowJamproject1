@@ -61,11 +61,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\DestroyByBoundary.cs" />
     <Compile Include="Assets\scripts\Gluttony\BodyBitsBullet.cs" />
     <Compile Include="Assets\scripts\Gluttony\CharacterControls.cs" />
+    <Compile Include="Assets\scripts\Gluttony\DestroyByContactG.cs" />
     <Compile Include="Assets\scripts\Gluttony\EnemyGluttonyPatrol.cs" />
     <Compile Include="Assets\scripts\Gluttony\GluttonyBodyBitsPlugins.cs" />
+    <Compile Include="Assets\scripts\Gluttony\HealthScript.cs" />
     <Compile Include="Assets\scripts\Gluttony\Mover.cs" />
     <Compile Include="Assets\scripts\Greed\GreedCameraScript.cs" />
     <Compile Include="Assets\scripts\Greed\GreedCanvasSetup.cs" />
@@ -97,7 +98,7 @@
     <Compile Include="Assets\scripts\WrathEnemyBulletTrail.cs" />
     <Compile Include="Assets\scripts\WrathMaster.cs" />
     <Compile Include="Assets\scripts\WrathMoveBulletTrail.cs" />
-    <None Include="Assets\Data\Dialouge1.txt" />
+    <None Include="Assets\Data\Dialogue.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Valerie Maule/Desktop/testys/UplowJamproject1/SJUP/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
