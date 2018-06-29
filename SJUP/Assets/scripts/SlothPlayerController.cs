@@ -32,6 +32,9 @@ public class SlothPlayerController : MonoBehaviour
     private Vector2 playerStartPoint;
     public float oldXPosition;
 
+    private bool stoppedJumping;
+    private bool canDoubleJump;
+
     // Use this for initialization
     void Start()
     {
@@ -41,7 +44,10 @@ public class SlothPlayerController : MonoBehaviour
         speedUpCount = speedUpCheckpoint;
         jumpTimeCount = jumpTime;
         playerStartPoint = rb2d.position;
-       // oldXPosition = rb2d.position.x - 1;
+        // oldXPosition = rb2d.position.x - 1;
+        stoppedJumping = true;
+        canDoubleJump = true;
+        anim = GetComponent<Animator> ();
     }
 
     // Update is called once per frame
@@ -72,15 +78,30 @@ public class SlothPlayerController : MonoBehaviour
         }
 
         //Checks if player presses jump and is able to jump
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb2d.AddForce(new Vector2(rb2d.velocity.x, jumpForce));
-            jumpSound.Stop ();
-            jumpSound.Play ();
+            if (grounded)
+            {
+                rb2d.AddForce(new Vector2(rb2d.velocity.x, jumpForce));
+                stoppedJumping = false;
+                jumpSound.Stop();
+                jumpSound.Play();
+            }
+            if (!grounded && canDoubleJump)
+            {
+                rb2d.velocity = new Vector2(speed, 0);
+                rb2d.AddForce(new Vector2(rb2d.velocity.x, jumpForce));
+                jumpTimeCount = jumpTime;
+                stoppedJumping = false;
+                canDoubleJump = false;
+                jumpSound.Stop();
+                jumpSound.Play();
+            }
+
         }
 
         //Checks if player holds down space for long jump
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && !stoppedJumping)
         {
             if (jumpTimeCount > 0)
             {
@@ -93,14 +114,18 @@ public class SlothPlayerController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             jumpTimeCount = 0;
+            stoppedJumping = true;
         }
 
         //Checks if player is grounded to reset long jump
         if (grounded)
         {
             jumpTimeCount = jumpTime;
+            canDoubleJump = true;
         }
 
+        anim.SetBool("grounded", grounded);
+        anim.SetBool("canDoubleJump", canDoubleJump);
 
     }
 

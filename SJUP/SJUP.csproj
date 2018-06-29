@@ -306,8 +306,8 @@
     <Compile Include="Assets\DestroyByBoundary.cs" />
     <Compile Include="Assets\scripts\Gluttony\BodyBitsBullet.cs" />
     <Compile Include="Assets\scripts\Gluttony\CharacterControls.cs" />
+    <Compile Include="Assets\scripts\Gluttony\EnemyGluttonyPatrol.cs" />
     <Compile Include="Assets\scripts\Gluttony\GluttonyBodyBitsPlugins.cs" />
-    <Compile Include="Assets\scripts\Gluttony\GluttonyPatrol.cs" />
     <Compile Include="Assets\scripts\Gluttony\Mover.cs" />
     <Compile Include="Assets\scripts\Greed\GreedCameraScript.cs" />
     <Compile Include="Assets\scripts\Greed\GreedCanvasSetup.cs" />
@@ -315,14 +315,28 @@
     <Compile Include="Assets\scripts\Greed\GreedGameData.cs" />
     <Compile Include="Assets\scripts\Greed\GreedSlotExit.cs" />
     <Compile Include="Assets\scripts\Greed\GreedSpinToWin.cs" />
+    <Compile Include="Assets\scripts\Lust\Character.cs" />
+    <Compile Include="Assets\scripts\Lust\ChoiceButton.cs" />
+    <Compile Include="Assets\scripts\Lust\DialogueManager.cs" />
+    <Compile Include="Assets\scripts\Lust\DialogueParser.cs" />
     <Compile Include="Assets\scripts\MainPause Menu\MainMenuStart.cs" />
     <Compile Include="Assets\scripts\MainPause Menu\MainRoomPauseMenu.cs" />
     <Compile Include="Assets\scripts\MainPause Menu\PauseMenu.cs" />
     <Compile Include="Assets\scripts\MainRoom\MainRoomControls.cs" />
+    <Compile Include="Assets\scripts\MainRoom\SlotScript.cs" />
+    <Compile Include="Assets\scripts\MainRoom\WallAlpha.cs" />
+    <Compile Include="Assets\scripts\MainRoom\WallAlpha2.cs" />
+    <Compile Include="Assets\scripts\MainRoom\WallAlpha3.cs" />
+    <Compile Include="Assets\scripts\MainRoom\WallAlpha4.cs" />
+    <Compile Include="Assets\scripts\MainRoom\WallHelper1.cs" />
+    <Compile Include="Assets\scripts\MainRoom\WallHelper2.cs" />
+    <Compile Include="Assets\scripts\MainRoom\WallHelper3.cs" />
+    <Compile Include="Assets\scripts\MainRoom\WallHelper4.cs" />
     <Compile Include="Assets\scripts\SlothCameraMinigame.cs" />
     <Compile Include="Assets\scripts\SlothDestroyer.cs" />
     <Compile Include="Assets\scripts\SlothGameManager.cs" />
     <Compile Include="Assets\scripts\SlothObjectPooler.cs" />
+    <Compile Include="Assets\scripts\SlothParallax.cs" />
     <Compile Include="Assets\scripts\SlothPlatformGenerator.cs" />
     <Compile Include="Assets\scripts\SlothPlatformScroller.cs" />
     <Compile Include="Assets\scripts\SlothPlayerController.cs" />
@@ -337,6 +351,7 @@
     <Compile Include="Assets\scripts\WrathMoveBulletTrail.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Data\Dialogue.txt" />
     <None Include="C:\Users\Rupert\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="C:\Users\Rupert\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="C:\Users\Rupert\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\Alert.uxml" />
