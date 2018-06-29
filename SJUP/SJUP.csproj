@@ -324,7 +324,9 @@
     <Compile Include="Assets\scripts\MainPause Menu\PauseMenu.cs" />
     <Compile Include="Assets\scripts\MainRoom\MainRoomControls.cs" />
     <Compile Include="Assets\scripts\MainRoom\WallAlpha.cs" />
+    <Compile Include="Assets\scripts\MainRoom\WallAlpha2.cs" />
     <Compile Include="Assets\scripts\MainRoom\WallHelper1.cs" />
+    <Compile Include="Assets\scripts\MainRoom\WallHelper2.cs" />
     <Compile Include="Assets\scripts\SlothCameraMinigame.cs" />
     <Compile Include="Assets\scripts\SlothDestroyer.cs" />
     <Compile Include="Assets\scripts\SlothGameManager.cs" />

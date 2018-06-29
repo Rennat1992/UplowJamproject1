@@ -5,6 +5,7 @@ using UnityEngine;
 public class WallAlpha : MonoBehaviour {
 
     public Color alph;
+    public Transform play;
 
     public bool enter;
 
@@ -30,6 +31,8 @@ public class WallAlpha : MonoBehaviour {
     void Start()
     {
         alph = this.gameObject.GetComponent<SpriteRenderer>().color;
+
+        play = GameObject.Find("Player").GetComponent<Transform>();
         enter = false;
     }
 
@@ -45,6 +48,10 @@ public class WallAlpha : MonoBehaviour {
         {
             alph.a = .5f;
             this.gameObject.GetComponent<SpriteRenderer>().color = alph;
+
+            //behind walls
+            play.position = new Vector3(GameObject.Find("Player").GetComponent<Transform>().position.x, GameObject.Find("Player").GetComponent<Transform>().position.y, -1);
+            GameObject.Find("Player").GetComponent<Transform>().position = play.position;
         }
 		
 	}
