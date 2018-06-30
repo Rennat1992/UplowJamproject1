@@ -12,7 +12,7 @@ public class MainRoomAnimator : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A))
         {
             anim.SetBool("isRunning", true);
         }
