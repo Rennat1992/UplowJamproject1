@@ -40,4 +40,6 @@ public class SlothObjectPooler : MonoBehaviour {
             pooledObjects.Add(obj);
             return obj;
     }
+
+
 }
