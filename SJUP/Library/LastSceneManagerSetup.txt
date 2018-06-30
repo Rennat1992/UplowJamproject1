@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
+- path: Assets/scenes/Sloth.unity
+=======
 - path: Assets/scenes/Gluttony.unity
+>>>>>>> cee8e42e76546da9a3a7cd8a5421d051c7e79e07
   isLoaded: 1
   isActive: 1
