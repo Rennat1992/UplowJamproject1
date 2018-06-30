@@ -24,7 +24,7 @@ public class SlothPlayerController : MonoBehaviour
     public AudioSource deathSound;
 
     public bool grounded = false;
-    public bool moving = false;
+    //public bool moving = false;
 
     private Animator anim;
     private float speedUpCount;
@@ -58,13 +58,13 @@ public class SlothPlayerController : MonoBehaviour
         rb2d.velocity = new Vector2 (speed, rb2d.velocity.y);
 
         //Check if player is moving or stopped by wall - BROKEN
-        moving = (rb2d.position.x < 0);
+        //moving = (rb2d.position.x < 0);
 
         //checks if player died
-        if ((rb2d.position.y < deathHeight) || !moving)
-        {
-           // StartCoroutine(RestartGameCo());
-        }
+        //if ((rb2d.position.y < deathHeight))
+        //{
+        //   StartCoroutine(RestartGameCo());
+        //}
 
         //Checks if player is on the ground
         //grounded = Physics2D.IsTouchingLayers(myCollider, whatIsGround);
@@ -130,21 +130,29 @@ public class SlothPlayerController : MonoBehaviour
     }
 
 
-    //Stuff for restarting the game post death
-    public IEnumerator RestartGameCo()
-    {
-        rb2d.velocity = new Vector2(speed, 0);
-        yield return new WaitForSeconds(2f);
-        rb2d.position = playerStartPoint;
-        rb2d.velocity = new Vector2(speed, 0);
-        oldXPosition = rb2d.position.x - 1;
-    }
+
+    ////Stuff for restarting the game post death
+    //public IEnumerator RestartGameCo()
+    //{
+    //    rb2d.velocity = new Vector2(0, 0);
+    //    yield return new WaitForSeconds(2f);
+    //    rb2d.position = playerStartPoint;
+    //    rb2d.velocity = new Vector2(speed, 0);
+    //    //oldXPosition = rb2d.position.x - 1;
+    //}
 
     void OnCollisionEnter2D (Collision2D other)
     {
         if (other.collider.tag == "Ground")
         {
             grounded = true;
+        }
+
+        if (other.collider.tag == "DeathBox")
+        {
+            rb2d.velocity = new Vector2(0, 0);
+            gameManager.RestartGame();
+            rb2d.velocity = new Vector2(speed, 0);
         }
     }
 

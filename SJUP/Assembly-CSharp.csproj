@@ -73,6 +73,15 @@
      <Compile Include="Assets\scripts\MainPause Menu\MainRoomPauseMenu.cs" />
      <Compile Include="Assets\scripts\MainPause Menu\PauseMenu.cs" />
      <Compile Include="Assets\scripts\MainRoom\MainRoomControls.cs" />
+     <Compile Include="Assets\scripts\MainRoom\SlotScript.cs" />
+     <Compile Include="Assets\scripts\MainRoom\WallAlpha.cs" />
+     <Compile Include="Assets\scripts\MainRoom\WallAlpha2.cs" />
+     <Compile Include="Assets\scripts\MainRoom\WallAlpha3.cs" />
+     <Compile Include="Assets\scripts\MainRoom\WallAlpha4.cs" />
+     <Compile Include="Assets\scripts\MainRoom\WallHelper1.cs" />
+     <Compile Include="Assets\scripts\MainRoom\WallHelper2.cs" />
+     <Compile Include="Assets\scripts\MainRoom\WallHelper3.cs" />
+     <Compile Include="Assets\scripts\MainRoom\WallHelper4.cs" />
      <Compile Include="Assets\scripts\SlothCameraMinigame.cs" />
      <Compile Include="Assets\scripts\SlothDestroyer.cs" />
      <Compile Include="Assets\scripts\SlothGameManager.cs" />
@@ -81,6 +90,7 @@
      <Compile Include="Assets\scripts\SlothPlatformGenerator.cs" />
      <Compile Include="Assets\scripts\SlothPlatformScroller.cs" />
      <Compile Include="Assets\scripts\SlothPlayerController.cs" />
+     <Compile Include="Assets\scripts\SlothPlayVideo.cs" />
      <Compile Include="Assets\scripts\WrathCharacter.cs" />
      <Compile Include="Assets\scripts\WrathCharacterCollider.cs" />
      <Compile Include="Assets\scripts\WrathCharacterMovement.cs" />

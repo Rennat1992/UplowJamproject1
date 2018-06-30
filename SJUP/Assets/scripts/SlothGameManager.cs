@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class SlothGameManager : MonoBehaviour {
 
-    public SlothPlayerController player;
+    public Transform platformGenerator;
+    private Vector3 platformStartPoint;
 
-    private Vector2 playerStartPoint;
+    public SlothPlayerController player;
+    private Vector3 playerStartPoint;
 
 	// Use this for initialization
 	void Start ()
@@ -15,21 +17,24 @@ public class SlothGameManager : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		
 	}
 
-    //public void RestartGame ()
-    //{
-    //    StartCoroutine (RestartGameCo ());
+    public void RestartGame()
+    {
+        StartCoroutine ("RestartGameCo");
 
-    //}
+    }
 
-    //public IEnumerator RestartGameCo ()
-    //{
-    //    player.GameObject.setActive(false);
-    //    yield return new WaitForSeconds(1f);
-    //    player.transform.position = playerStartPoint;
-    //    player.GameObject.setActive(true);
-    //}
+    public IEnumerator RestartGameCo ()
+    {
+
+        //player.gameObject.setActive(false);
+        yield return new WaitForSeconds(1f);
+        player.transform.position = playerStartPoint;
+        platformGenerator.position = platformStartPoint;
+        //player.gameObject.setActive(true);
+    } 
 }
