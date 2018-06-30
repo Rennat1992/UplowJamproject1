@@ -96,7 +96,7 @@ public class GreedSpinToWin : MonoBehaviour
     {
         //Subtract funds
         GreedGameData.GreedGameDataSingle.funds = GreedGameData.GreedGameDataSingle.funds - 100;
-        textUpdateFunds.text = "Cash Money: " + GreedGameData.GreedGameDataSingle.funds.ToString();
+        textUpdateFunds.text = "Cash Money: \n" + GreedGameData.GreedGameDataSingle.funds.ToString();
 
         //reset sprite
         imageSlot1.sprite = reset;
@@ -215,7 +215,7 @@ public class GreedSpinToWin : MonoBehaviour
 
             //Some kind of score system
             GreedGameData.GreedGameDataSingle.score += 1000 * mult;
-            GameObject.Find("Score").GetComponent<Text>().text = "Score: " + GreedGameData.GreedGameDataSingle.score.ToString();
+            GameObject.Find("Score").GetComponent<Text>().text = "Score: \n" + GreedGameData.GreedGameDataSingle.score.ToString();
         }
         //slots 1->3 DOUBLES
         else if ((imageSlot1.sprite.name.ToString() == imageSlot2.sprite.name.ToString()) || (imageSlot1.sprite.name.ToString() == imageSlot3.sprite.name.ToString()) || (imageSlot2.sprite.name.ToString() == imageSlot3.sprite.name.ToString()))
@@ -244,7 +244,7 @@ public class GreedSpinToWin : MonoBehaviour
 
                 //Update score
                 GreedGameData.GreedGameDataSingle.score += 50 * mult;
-                GameObject.Find("Score").GetComponent<Text>().text = "Score: " + GreedGameData.GreedGameDataSingle.score.ToString();
+                GameObject.Find("Score").GetComponent<Text>().text = "Score: \n" + GreedGameData.GreedGameDataSingle.score.ToString();
             }
             else if ((imageSlot1.sprite.name.ToString() == imageSlot3.sprite.name.ToString()) || (imageSlot2.sprite.name.ToString() == imageSlot3.sprite.name.ToString()))
             {
@@ -263,7 +263,7 @@ public class GreedSpinToWin : MonoBehaviour
 
                 //Update score
                 GreedGameData.GreedGameDataSingle.score += 50 * mult;
-                GameObject.Find("Score").GetComponent<Text>().text = "Score: " + GreedGameData.GreedGameDataSingle.score.ToString();
+                GameObject.Find("Score").GetComponent<Text>().text = "Score: \n" + GreedGameData.GreedGameDataSingle.score.ToString();
             }
 
 
@@ -292,7 +292,7 @@ public class GreedSpinToWin : MonoBehaviour
 
                 //Some kind of score system
                 GreedGameData.GreedGameDataSingle.score += 1000 * mult;
-                GameObject.Find("Score").GetComponent<Text>().text = "Score: " + GreedGameData.GreedGameDataSingle.score.ToString();
+                GameObject.Find("Score").GetComponent<Text>().text = "Score: \n" + GreedGameData.GreedGameDataSingle.score.ToString();
             }
             //slots 4->6 DOUBLES
             else if ((imageSlot4.sprite.name.ToString() == imageSlot5.sprite.name.ToString()) || (imageSlot4.sprite.name.ToString() == imageSlot6.sprite.name.ToString()) || (imageSlot5.sprite.name.ToString() == imageSlot6.sprite.name.ToString()))
@@ -321,7 +321,7 @@ public class GreedSpinToWin : MonoBehaviour
 
                     //Update score
                     GreedGameData.GreedGameDataSingle.score += 50 * mult;
-                    GameObject.Find("Score").GetComponent<Text>().text = "Score: " + GreedGameData.GreedGameDataSingle.score.ToString();
+                    GameObject.Find("Score").GetComponent<Text>().text = "Score: \n" + GreedGameData.GreedGameDataSingle.score.ToString();
                 }
                 else if ((imageSlot4.sprite.name.ToString() == imageSlot6.sprite.name.ToString()) || (imageSlot5.sprite.name.ToString() == imageSlot6.sprite.name.ToString()))
                 {
@@ -340,7 +340,7 @@ public class GreedSpinToWin : MonoBehaviour
 
                     //Update score
                     GreedGameData.GreedGameDataSingle.score += 50 * mult;
-                    GameObject.Find("Score").GetComponent<Text>().text = "Score: " + GreedGameData.GreedGameDataSingle.score.ToString();
+                    GameObject.Find("Score").GetComponent<Text>().text = "Score: \n" + GreedGameData.GreedGameDataSingle.score.ToString();
                 }
             }
 
@@ -368,7 +368,7 @@ public class GreedSpinToWin : MonoBehaviour
 
                 //Some kind of score system
                 GreedGameData.GreedGameDataSingle.score += 1000 * mult;
-                GameObject.Find("Score").GetComponent<Text>().text = "Score: " + GreedGameData.GreedGameDataSingle.score.ToString();
+                GameObject.Find("Score").GetComponent<Text>().text = "Score: \n" + GreedGameData.GreedGameDataSingle.score.ToString();
             }
             //slots 4->6 DOUBLES
             else if ((imageSlot7.sprite.name.ToString() == imageSlot8.sprite.name.ToString()) || (imageSlot7.sprite.name.ToString() == imageSlot9.sprite.name.ToString()) || (imageSlot8.sprite.name.ToString() == imageSlot9.sprite.name.ToString()))
@@ -397,7 +397,7 @@ public class GreedSpinToWin : MonoBehaviour
 
                     //Update score
                     GreedGameData.GreedGameDataSingle.score += 50 * mult;
-                    GameObject.Find("Score").GetComponent<Text>().text = "Score: " + GreedGameData.GreedGameDataSingle.score.ToString();
+                    GameObject.Find("Score").GetComponent<Text>().text = "Score: \n" + GreedGameData.GreedGameDataSingle.score.ToString();
                 }
                 else if ((imageSlot7.sprite.name.ToString() == imageSlot9.sprite.name.ToString())|| (imageSlot8.sprite.name.ToString() == imageSlot9.sprite.name.ToString()))
                 {
@@ -416,7 +416,7 @@ public class GreedSpinToWin : MonoBehaviour
 
                     //Update score
                     GreedGameData.GreedGameDataSingle.score += 50 * mult;
-                    GameObject.Find("Score").GetComponent<Text>().text = "Score: " + GreedGameData.GreedGameDataSingle.score.ToString();
+                    GameObject.Find("Score").GetComponent<Text>().text = "Score: \n" + GreedGameData.GreedGameDataSingle.score.ToString();
                 }
             }
         }
@@ -446,7 +446,7 @@ public class GreedSpinToWin : MonoBehaviour
 
             //Update score
             GreedGameData.GreedGameDataSingle.score += 500 * mult;
-            GameObject.Find("Score").GetComponent<Text>().text = "Score: " + GreedGameData.GreedGameDataSingle.score.ToString();
+            GameObject.Find("Score").GetComponent<Text>().text = "Score: \n" + GreedGameData.GreedGameDataSingle.score.ToString();
         }
     }
 }
