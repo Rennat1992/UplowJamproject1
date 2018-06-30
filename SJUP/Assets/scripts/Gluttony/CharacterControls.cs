@@ -18,9 +18,19 @@ public class Boundary
 
     private float nextFire;
 
+    public bool facingRight = true;
+
     // Use this for initialization
     void Start()
     {
+    }
+
+    void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
 
     // Update is called once per frame
@@ -30,6 +40,8 @@ public class Boundary
         {
             transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime, 0f, 0f));
         }
+
+
     }
 
     //To allow Player to shoot
