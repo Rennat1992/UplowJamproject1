@@ -1,12 +1,10 @@
-﻿    //Alex's Code
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BodyBitsBullet : MonoBehaviour {
 
-    public float fireRate = 0;
+    public float fireRate = 2;
     public int Damage = 1;
     public LayerMask whatToHit;
 
@@ -14,7 +12,7 @@ public class BodyBitsBullet : MonoBehaviour {
     float timeToSpawnEffect = 0;
     public float effectSpawnRate = 10;
 
-    float timeToFire = 0;
+    float timeToFire = 3;
     Transform firePoint;
 
     // Use this for initialization
