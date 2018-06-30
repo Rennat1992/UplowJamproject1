@@ -304,7 +304,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\scripts\Gluttony\BodyBitsBullet.cs" />
-    <Compile Include="Assets\scripts\Gluttony\CharacterAnimation.cs" />
     <Compile Include="Assets\scripts\Gluttony\CharacterControls.cs" />
     <Compile Include="Assets\scripts\Gluttony\DestroyByContactG.cs" />
     <Compile Include="Assets\scripts\Gluttony\EnemyGluttonyPatrol.cs" />
