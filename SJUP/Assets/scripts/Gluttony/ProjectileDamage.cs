@@ -16,9 +16,19 @@ public class ProjectileDamage : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "GluttonyStillBody")
+        if (collision.gameObject.name == "Gluttony")
         {
             HealthScript.HealthScriptSingle.DamageEnemy(1);
         }
+        
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "Boundary")
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
