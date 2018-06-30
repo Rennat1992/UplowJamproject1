@@ -43,6 +43,13 @@ public class SlothPlayerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        speed = 4f;
+        jumpForce = 500f;
+        inAirForce = 30f;
+        speedMultiplier = 1.2f;
+        jumpTime = .5f;
+        deathHeight = -6f;
+
         rb2d = GetComponent<Rigidbody2D>();
         rb2d.velocity = new Vector2 (speed, rb2d.velocity.y);
         myCollider = GetComponent<Collider2D>();
