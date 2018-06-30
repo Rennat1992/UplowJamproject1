@@ -326,6 +326,7 @@
     <Compile Include="Assets\scripts\MainPause Menu\MainMenuStart.cs" />
     <Compile Include="Assets\scripts\MainPause Menu\MainRoomPauseMenu.cs" />
     <Compile Include="Assets\scripts\MainPause Menu\PauseMenu.cs" />
+    <Compile Include="Assets\scripts\MainRoom\MainRoomAnimator.cs" />
     <Compile Include="Assets\scripts\MainRoom\MainRoomControls.cs" />
     <Compile Include="Assets\scripts\MainRoom\SlotScript.cs" />
     <Compile Include="Assets\scripts\MainRoom\WallAlpha.cs" />
