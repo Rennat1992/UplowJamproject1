@@ -63,6 +63,9 @@ public class SlothPlayerController : MonoBehaviour
         speedStore = speed;
         speedUpCheckpointStore = speedUpCount;
         speedUpCountStore = speedUpCount;
+
+        //set Gravity?
+        rb2d.gravityScale = 5;
     }
 
     // Update is called once per frame

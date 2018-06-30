@@ -23,6 +23,7 @@ public class Boundary
     // Use this for initialization
     void Start()
     {
+        this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 10;
     }
 
     void Flip()
