@@ -64,6 +64,7 @@ public class BodyBitsBullet : MonoBehaviour {
             {
                 enemy.DamageEnemy(Damage);
                 Debug.Log("We hit " + hit.collider.name + " and did " + Damage + " damage.");
+                Destroy(gameObject); 
             }
         }
     }

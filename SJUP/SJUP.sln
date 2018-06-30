@@ -1,6 +1,11 @@
 ﻿
+<<<<<<< HEAD
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+=======
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
+>>>>>>> 5022ca4b2647d86f7e92c9bec4925d62fb911d13
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SJUP", "Assembly-CSharp.csproj", "{A37EA921-6F99-10C5-5663-63008C5A3916}"
 EndProject
 Global
