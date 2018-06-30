@@ -4,6 +4,7 @@ Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
+<<<<<<< HEAD
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
@@ -54,3 +55,5 @@ Cmd: initializeCompiler
 >>>>>>> bb143271dd820f3fa22b59eebc57f90ca8b27831
 >>>>>>> 6062663c78516a2136449130f72c6faffc662407
 >>>>>>> 0a0af9a67db5cbc274ef491658b3b65cd4502acd
+=======
+>>>>>>> 87040622fc999804fe8711ddd7a0634b1d163348
