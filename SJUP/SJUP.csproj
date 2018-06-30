@@ -303,7 +303,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BoltDamage.cs" />
     <Compile Include="Assets\scripts\Gluttony\BodyBitsBullet.cs" />
     <Compile Include="Assets\scripts\Gluttony\CharacterAnimation.cs" />
     <Compile Include="Assets\scripts\Gluttony\CharacterControls.cs" />
@@ -323,6 +322,7 @@
     <Compile Include="Assets\scripts\Lust\ChoiceButton.cs" />
     <Compile Include="Assets\scripts\Lust\DialogueManager.cs" />
     <Compile Include="Assets\scripts\Lust\DialogueParser.cs" />
+    <Compile Include="Assets\scripts\MainPause Menu\BackToHub.cs" />
     <Compile Include="Assets\scripts\MainPause Menu\MainMenuStart.cs" />
     <Compile Include="Assets\scripts\MainPause Menu\MainRoomPauseMenu.cs" />
     <Compile Include="Assets\scripts\MainPause Menu\PauseMenu.cs" />

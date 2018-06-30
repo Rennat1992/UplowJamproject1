@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class PauseMenu : MonoBehaviour
     //Canvas Element
     public Canvas Pause;
 
-    //puase player control
+    //pause player control
     public GameObject playP;
 
     bool paused = false;
@@ -18,9 +19,9 @@ public class PauseMenu : MonoBehaviour
 
     void Start()
     {
-        Pause  = GameObject.Find("PauseMenu").GetComponent<Canvas>();
+        Pause  = this.gameObject.GetComponent<Canvas>();
         Pause.enabled = false;
-        
+        GameObject.Find("PauseImage").GetComponent<VideoPlayer>().enabled = false;
     }
 
     void Update()
@@ -28,6 +29,7 @@ public class PauseMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Pause.enabled = !Pause.enabled;
+            GameObject.Find("PauseImage").GetComponent<VideoPlayer>().enabled = !GameObject.Find("PauseImage").GetComponent<VideoPlayer>().enabled;
             paused = togglePause();
         }
     }
