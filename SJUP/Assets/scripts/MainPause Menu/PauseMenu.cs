@@ -10,7 +10,7 @@ public class PauseMenu : MonoBehaviour
     //Canvas Element
     public Canvas Pause;
 
-    //puase player control
+    //pause player control
     public GameObject playP;
 
     bool paused = false;
@@ -18,7 +18,7 @@ public class PauseMenu : MonoBehaviour
 
     void Start()
     {
-        Pause  = GameObject.Find("PauseMenu").GetComponent<Canvas>();
+        Pause  = this.gameObject.GetComponent<Canvas>();
         Pause.enabled = false;
         
     }
@@ -28,21 +28,22 @@ public class PauseMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Pause.enabled = !Pause.enabled;
-            paused = togglePause();
+            //GameObject.Find("Vidja").GetComponent<Transform>()
+            //paused = togglePause();
         }
     }
 
-    bool togglePause()
-    {
-        if (Time.timeScale == 0f)
-        {
-            Time.timeScale = 1f;
-            return (false);
-        }
-        else
-        {
-            Time.timeScale = 0f;
-            return (true);
-        }
-    }
+    //bool togglePause()
+    //{
+    //    if (Time.timeScale == 0f)
+    //    {
+    //        Time.timeScale = 1f;
+    //        return (false);
+    //    }
+    //    else
+    //    {
+    //        Time.timeScale = 0f;
+    //        return (true);
+    //    }
+    //}
 }
