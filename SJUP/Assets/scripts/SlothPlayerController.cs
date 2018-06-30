@@ -6,9 +6,11 @@ public class SlothPlayerController : MonoBehaviour
 {
 
     public float speed;
+    private float speedStore;
     public float jumpForce;
     public float inAirForce;
     public float speedUpCheckpoint;
+    private float speedUpCheckpointStore;
     public float speedMultiplier;
     public float jumpTime;
     public float deathHeight;
@@ -19,6 +21,8 @@ public class SlothPlayerController : MonoBehaviour
     public Collider2D myCollider;
     public Rigidbody2D rb2d;
     public SlothGameManager gameManager;
+    public SlothPlatformGenerator platformGenerator;
+    public SlothObjectPooler objectPooler;
 
     public AudioSource jumpSound;
     public AudioSource deathSound;
@@ -28,6 +32,7 @@ public class SlothPlayerController : MonoBehaviour
 
     private Animator anim;
     private float speedUpCount;
+    private float speedUpCountStore;
     private float jumpTimeCount;
     private Vector2 playerStartPoint;
     public float oldXPosition;
@@ -48,6 +53,9 @@ public class SlothPlayerController : MonoBehaviour
         stoppedJumping = true;
         canDoubleJump = true;
         anim = GetComponent<Animator> ();
+        speedStore = speed;
+        speedUpCheckpointStore = speedUpCount;
+        speedUpCountStore = speedUpCount;
     }
 
     // Update is called once per frame
@@ -152,7 +160,11 @@ public class SlothPlayerController : MonoBehaviour
         {
             rb2d.velocity = new Vector2(0, 0);
             gameManager.RestartGame();
+            speed = speedStore;
+            speedUpCount = speedUpCountStore;
+            speedUpCheckpoint = speedUpCheckpointStore;
             rb2d.velocity = new Vector2(speed, 0);
+
         }
     }
 
