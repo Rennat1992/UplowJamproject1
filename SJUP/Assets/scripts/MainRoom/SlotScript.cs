@@ -6,10 +6,14 @@ public class SlotScript : MonoBehaviour {
 
     private CanvasGroup SlotCanvas;
 
+    private AudioSource aSource;
+    public AudioClip sound;
+
 
     // Use this for initialization
     void Start () {
         SlotCanvas = GameObject.Find("SlotCanvas").GetComponent<CanvasGroup>();
+        aSource = GameObject.Find("Audio").GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -26,6 +30,8 @@ public class SlotScript : MonoBehaviour {
             GreedSpinToWin.GreedSpinToWinSingle.slotMachine = true;
 
             GameObject.Find("Player").GetComponent<MainRoomControls>().enabled = false;
+            aSource.clip = sound;
+            aSource.Play();
         }
     }
 }
