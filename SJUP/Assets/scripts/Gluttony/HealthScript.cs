@@ -4,6 +4,24 @@ using UnityEngine;
 
 public class HealthScript : MonoBehaviour
 {
+    //Singleton Motherfuckers!!!
+    public static HealthScript HealthScriptSingle;
+
+    void Awake()
+    {
+        if (HealthScriptSingle == null)
+        {
+            //DontDestroyOnLoad(gameObject);
+            HealthScriptSingle = this;
+        }
+        else if (HealthScriptSingle != this)
+        {
+            Destroy(gameObject);
+        }
+
+        //currentQuest = 0f;
+    }
+
 
     [System.Serializable]
     public class EnemyStats
