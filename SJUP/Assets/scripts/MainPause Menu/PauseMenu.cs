@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class PauseMenu : MonoBehaviour
     {
         Pause  = this.gameObject.GetComponent<Canvas>();
         Pause.enabled = false;
-        
+        GameObject.Find("PauseImage").GetComponent<VideoPlayer>().enabled = false;
     }
 
     void Update()
@@ -28,22 +29,22 @@ public class PauseMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Pause.enabled = !Pause.enabled;
-            //GameObject.Find("Vidja").GetComponent<Transform>()
-            //paused = togglePause();
+            GameObject.Find("PauseImage").GetComponent<VideoPlayer>().enabled = !GameObject.Find("PauseImage").GetComponent<VideoPlayer>().enabled;
+            paused = togglePause();
         }
     }
 
-    //bool togglePause()
-    //{
-    //    if (Time.timeScale == 0f)
-    //    {
-    //        Time.timeScale = 1f;
-    //        return (false);
-    //    }
-    //    else
-    //    {
-    //        Time.timeScale = 0f;
-    //        return (true);
-    //    }
-    //}
+    bool togglePause()
+    {
+        if (Time.timeScale == 0f)
+        {
+            Time.timeScale = 1f;
+            return (false);
+        }
+        else
+        {
+            Time.timeScale = 0f;
+            return (true);
+        }
+    }
 }

@@ -10,7 +10,13 @@ public class MainRoomControls : MonoBehaviour
     public bool facingRight = true;
 
     //touching a door
-    public bool check = false;
+    public bool sloth = false;
+
+    //touching a door
+    public bool gluttony = false;
+
+    //touching a door
+    public bool greed = false;
 
     public float maxSpeed = 10f;
 
@@ -42,9 +48,14 @@ public class MainRoomControls : MonoBehaviour
         //    rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
         //}
 
-        if (Input.GetKeyDown(KeyCode.Q) && check == true)
+        if (Input.GetKeyDown(KeyCode.Q) && sloth == true)
         {
-            StartCoroutine(LoadYourAsyncScene());
+            StartCoroutine(LoadSloth());
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q) && gluttony == true)
+        {
+            StartCoroutine(LoadGluttony());
         }
     }
 
@@ -86,9 +97,20 @@ public class MainRoomControls : MonoBehaviour
         if (col.gameObject.name == "SlothDoor")
         {
             Debug.Log("door");
-            check = true;
+            sloth = true;
         }
-        
+
+        if (col.gameObject.name == "GluttonyDoor")
+        {
+            Debug.Log("door");
+            gluttony = true;
+        }
+
+        if (col.gameObject.name == "GreedDoor")
+        {
+            //Debug.Log("door"); Just use the chest for now
+            //greed = true;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D col)
@@ -96,7 +118,18 @@ public class MainRoomControls : MonoBehaviour
         Debug.Log("door");
         if (col.gameObject.name == "SlothDoor")
         {
-            check = false;
+            sloth = false;
+        }
+
+        if (col.gameObject.name == "GluttonyDoor")
+        {
+            gluttony = false;
+        }
+
+        if (col.gameObject.name == "GreedDoor")
+        {
+            //Temp shit
+            //greed = false;
         }
         if (col.gameObject.tag == "Wall")
         {
@@ -107,14 +140,20 @@ public class MainRoomControls : MonoBehaviour
     }
 
 
-    IEnumerator LoadYourAsyncScene()
+    IEnumerator LoadSloth()
     {
-        // The Application loads the Scene in the background as the current Scene runs.
-        // This is particularly good for creating loading screens.
-        // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
-        // a sceneBuildIndex of 1 as shown in Build Settings.
-
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Sloth");
+
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+    }
+
+    IEnumerator LoadGluttony()
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Gluttony");
 
         // Wait until the asynchronous scene fully loads
         while (!asyncLoad.isDone)
